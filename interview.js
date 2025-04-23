@@ -23,20 +23,26 @@ function addMessage(text) {
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
-// function speak(text) {
-//   const utterance = new SpeechSynthesisUtterance(text);
-//   synth.speak(utterance);
-// }
 function speak(text) {
-  speechSynthesis.cancel(); // Stop any ongoing speech
   const utterance = new SpeechSynthesisUtterance(text);
+  const voices = speechSynthesis.getVoices();
+
+  const selectedVoice = voices.find(
+    (voice) => voice.name === "Google UK English Female"
+  ); // Example, change as per your system
+
+  if (selectedVoice) {
+    utterance.voice = selectedVoice;
+  }
+
+  speechSynthesis.cancel();
   setTimeout(() => {
-    synth.speak(utterance);
-  }, 100); // Slight delay ensures smoother execution
+    speechSynthesis.speak(utterance);
+  }, 100);
 }
 
 async function askQuestion() {
-  const prompt = `Act as an Indian Interviewer. Ask one interview question in ${subject}.`;
+  const prompt = `Act as an Interviewer. Ask one short interview question in ${subject}.`;
   const response = await fetchGemini(prompt);
   currentQuestion = response;
   addMessage("HR: " + currentQuestion);
