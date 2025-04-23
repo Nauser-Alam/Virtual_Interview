@@ -36,7 +36,7 @@ function speak(text) {
 }
 
 async function askQuestion() {
-  const prompt = `Act as an HR. Ask one technical interview question in ${subject}.`;
+  const prompt = `Act as an HR. Ask one theoratical interview question in ${subject}.`;
   const response = await fetchGemini(prompt);
   currentQuestion = response;
   addMessage("HR: " + currentQuestion);
@@ -44,7 +44,7 @@ async function askQuestion() {
 }
 
 async function evaluateAnswer(answer) {
-  const prompt = `Evaluate this technical answer on correctness, grammar, and pronunciation. Also suggest improvement.
+  const prompt = `Evaluate this answer on correctness, grammar, and pronunciation. Also suggest improvement.
   Question: ${currentQuestion}
   Answer: ${answer}`;
   const feedback = await fetchGemini(prompt);
@@ -102,9 +102,7 @@ async function handleIntroduction(introText) {
   const prompt = `This is a candidate's self-introduction: "${introText}". Give short feedback like an HR on grammar, fluency, and professionalism.`;
   const response = await fetchGemini(prompt);
   addMessage("HR: " + response);
-  speak(
-    "Thanks for the introduction. Let's begin the technical questions now."
-  );
+  speak("Thanks for the introduction. Let's begin with questions now.");
   setTimeout(() => {
     askQuestion();
   }, 2000);
