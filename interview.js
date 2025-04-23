@@ -36,7 +36,7 @@ function speak(text) {
 }
 
 async function askQuestion() {
-  const prompt = `Act as an HR. Ask one theoratical interview question in ${subject}.`;
+  const prompt = `Act as an Indian Interviewer. Ask one interview question in ${subject}.`;
   const response = await fetchGemini(prompt);
   currentQuestion = response;
   addMessage("HR: " + currentQuestion);
