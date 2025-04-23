@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Interview</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="interview-page-container">
+    <div class="interview-page-circle">HR</div>
+    <div id="messages"></div>
+    <div class="interview-page-controls">
+      <button class="interview-page-record-button" disabled>
+        <span class="material-icons">mic</span>
+      </button>
+      <button class="interview-page-end-call-button" onclick="endInterview()">
+        <span class="material-icons">call_end</span>
+      </button>
+    </div>
+  </div>
+  <script src="interview.js"></script>
+</body>
+</html>

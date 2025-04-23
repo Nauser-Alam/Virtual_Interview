@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Interview - Select Subject</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="card">
+      <h1><span class="material-icons">smart_toy</span> Virtual Interview</h1>
+      <p class="subheading">Prepare for your next job with AI-powered mock interviews.</p>
+
+      <div class="input-group">
+        <label for="name-input">Enter Your Name</label>
+        <input type="text" id="name-input" placeholder="e.g., Aryan" required />
+      </div>
+
+      <div class="subject-group">
+        <label for="subject-select">Choose a Subject</label>
+        <select id="subject-select">
+          <option value="">-- Select Subject --</option>
+          <option value="JavaScript">🟨 JavaScript - Frontend scripting & logic</option>
+          <option value="DBMS">🗄️ DBMS - Database fundamentals & SQL</option>
+          <option value="Operating Systems">🧠 Operating Systems - Threads, memory & scheduling</option>
+        </select>
+      </div>
+
+      <button class="start-btn" onclick="startInterview()">
+        <span class="material-icons">play_arrow</span> Start Interview
+      </button>
+
+      <div id="loading" class="loading-spinner hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

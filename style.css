@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container, .interview-room {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+select, button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+video {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.chat {
+  margin-top: 20px;
+}
+
+#messages {
+  height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.interview-page-container {
+  background: #f9fafb;
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interview-page-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#messages {
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.interview-page-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.interview-page-record-button,
+.interview-page-end-call-button {
+  background-color: #ef4444;
+  border: none;
+  border-radius: 50%;
+  padding: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.interview-page-record-button {
+  background-color: #10b981;
+}
