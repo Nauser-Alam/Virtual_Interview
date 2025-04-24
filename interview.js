@@ -25,15 +25,15 @@ function addMessage(text) {
 
 function speak(text) {
   const utterance = new SpeechSynthesisUtterance(text);
-  const voices = speechSynthesis.getVoices();
+  // const voices = speechSynthesis.getVoices();
 
-  const selectedVoice = voices.find(
-    (voice) => voice.name === "Google UK English Female"
-  ); // Example, change as per your system
+  // const selectedVoice = voices.find(
+  //   (voice) => voice.name === "Google UK English Female"
+  // ); // Example, change as per your system
 
-  if (selectedVoice) {
-    utterance.voice = selectedVoice;
-  }
+  // if (selectedVoice) {
+  //   utterance.voice = selectedVoice;
+  // }
 
   speechSynthesis.cancel();
   setTimeout(() => {
